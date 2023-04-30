@@ -139,6 +139,20 @@ public class DoublyLinkedList {
         }
     }
 
+    // This function prints contents of
+    // linked list starting from the given node
+    public static void printMemoryLocationlist(Node node)
+    {
+        Node last = null;
+        System.out.println(
+                "Traversal in forward direction");
+        while (node != null) {
+            System.out.print(node + " ");
+            last = node;
+            node = node.next;
+        }
+    }
+
     // Driver code
     public static void main(String[] args)
     {
@@ -170,5 +184,9 @@ public class DoublyLinkedList {
 
         System.out.println("Created DLL is: ");
         printlist(head);
+        System.out.println("Printing head memory location: ".concat(head.toString()));
+        System.out.println("Printing head.next memory location: ".concat(head.next.toString()));
+
+        printMemoryLocationlist(head);
     }
 }
